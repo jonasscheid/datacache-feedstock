@@ -1,7 +1,6 @@
 {% set name = "datacache" %}
 {% set version = "1.5.0" %}
 {% set sha256 = "5e80a6263d14340bbf02586ffc942baa5ce37af31f456095ef30537e97c353e9" %}
-{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
