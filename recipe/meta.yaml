@@ -16,12 +16,12 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
-    - python
+  host:
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python
+    - python >={{ python_min }}
     - pandas >=0.15.2
     - appdirs >=1.4.0
     - progressbar33 >=2.4
@@ -31,6 +31,8 @@ requirements:
     - mock
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - datacache
 
